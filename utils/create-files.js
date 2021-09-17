@@ -19,5 +19,6 @@ module.exports = async (name) => {
         file(name).content
       )
     );
+    alert({ type: "success", msg:'Files created'})
   }
 };
