@@ -7,7 +7,7 @@ module.exports = ({ clear = true }) => {
 	unhandled();
 	welcome({
 		title: `umbraco-cli`,
-		tagLine: `unicorns and rainbow`,
+		tagLine: `Scaffold a property editor out of unicorns and rainbow!`,
 		description: pkg.description,
 		version: pkg.version,
 		bgColor: '#3544b1',
