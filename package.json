@@ -1,6 +1,6 @@
 {
   "name": "umb-cli",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A cli helper for extending the Umbraco backoffice.",
   "bin": {
     "umbraco": "index.js"
