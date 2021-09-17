@@ -1,0 +1,23 @@
+{
+  "name": "umbraco-cli",
+  "version": "0.0.0",
+  "description": "A cli for extending the Umbraco backoffice",
+  "bin": {
+    "umbraco": "index.js"
+  },
+  "keywords": [
+    "Umbraco"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "julczka/umbraco-cli",
+  "author": {
+    "name": "Julia Gru"
+  },
+  "dependencies": {
+    "change-case": "^4.1.2",
+    "cli-alerts": "^1.2.2",
+    "cli-handle-unhandled": "^1.1.1",
+    "cli-welcome": "^2.2.2"
+  }
+}
