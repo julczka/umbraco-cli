@@ -1,4 +1,8 @@
 const changeCaseTo = require('./change-case');
+const toDotCase = require('to-dot-case')
+const dir = `${process.cwd()}/App_Plugins`;
+const propertyEditorPath = (name) => `${changeCaseTo.kebab(name)}`
+
 
 
 const view = (name) => ({
@@ -28,4 +32,25 @@ const styles = (name) => ({
     }`
 })
 
-module.exports = [view, controller, styles];
+const manifest = (name) => ({
+    name: `package.manifest`,
+    content: `{
+        "propertyEditors": [
+          {
+            "name": "${name}",
+            "alias": "${toDotCase(name)}",
+            "editor": {
+              "view": "~/App_Plugins/${propertyEditorPath(name)}/${view(name).name}"
+            }
+          }
+        ],
+        "javascript": [
+          "~/App_Plugins/${propertyEditorPath(name)}/${controller(name).name}"
+        ],
+        "css": [
+            "~/App_Plugins/${propertyEditorPath(name)}/${styles(name).name}"
+        ]
+      }`
+})
+
+module.exports = [manifest, view, controller, styles];

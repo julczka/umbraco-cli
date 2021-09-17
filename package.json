@@ -18,6 +18,7 @@
     "change-case": "^4.1.2",
     "cli-alerts": "^1.2.2",
     "cli-handle-unhandled": "^1.1.1",
-    "cli-welcome": "^2.2.2"
+    "cli-welcome": "^2.2.2",
+    "to-dot-case": "^1.0.0"
   }
 }
