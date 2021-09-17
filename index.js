@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-const alert = require('cli-alerts');
 const init = require('./utils/init');
 const readline = require('readline');
-const toKebabCase = require('./utils/to-kebap-case');
+const changeCaseTo = require('./utils/change-case');
+const createFiles = require('./utils/create-files');
 
 (async () => {
 	init({clear: true});
@@ -21,9 +21,8 @@ const toKebabCase = require('./utils/to-kebap-case');
         // TODO: Log the answer in a database
         name = answer;
         console.log(`Scaffolding ${answer}...`);
-      
         
-        console.log(toKebabCase(name));
+        createFiles(name);
          rl.close();
       });
 
