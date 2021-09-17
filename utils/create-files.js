@@ -1,9 +1,9 @@
-const fs = require('fs');
-const alert = require('cli-alerts');
-const changeCaseTo = require('./change-case');
-const files = require('./files-data');
+const fs = require("fs");
+const alert = require("cli-alerts");
+const changeCaseTo = require("./change-case");
+const files = require("./files-data");
 
-module.exports = (name) => {
+const path = require("path");
 
     const dir = `${process.cwd()}/App_Plugins`;
 
@@ -15,7 +15,9 @@ module.exports = (name) => {
         const propertyEditorPath = `${dir}/${changeCaseTo.kebab(name)}`
         fs.mkdirSync(propertyEditorPath);
         files.forEach(file => fs.writeFileSync(`${propertyEditorPath}/${file(name).name}`, file(name).content))
+module.exports = async (name) => {
+  const dir = path.join(process.cwd(), "App_Plugins");
 
 
     }
-}
+  } catch (error) {

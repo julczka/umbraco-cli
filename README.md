@@ -1,2 +1,3 @@
 # umbraco-cli
- A cli helper for extending tthe Unvraco backoffice
+
+A cli helper for extending the Umbraco backoffice.

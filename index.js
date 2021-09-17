@@ -5,7 +5,7 @@ const readline = require('readline');
 const changeCaseTo = require('./utils/change-case');
 const createFiles = require('./utils/create-files');
 
-(async () => {
+( () => {
 	init({clear: true});
     let name = '';
 
@@ -22,7 +22,7 @@ const createFiles = require('./utils/create-files');
         name = answer;
         console.log(`Scaffolding ${answer}...`);
         
-        createFiles(name);
+         createFiles(name);
          rl.close();
       });
 
